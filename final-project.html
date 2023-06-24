@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    section.hero {
+      background-color: #e6e6e6;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    section.hero h2 {
+      margin-top: 0;
+    }
+
+    section.hero .cta-button {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    section.hero .cta-button:hover {
+      background-color: #666;
+    }
+
+    section.featured {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    section.featured h2 {
+      margin-bottom: 20px;
+    }
+
+    .nft-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      justify-items: center;
+    }
+
+    .nft-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .nft-card > img {
+      height: 10vh;
+      width: auto;
+    }
+    .css-navbar {
+      margin: 1vh;
+
+      display: flex;
+      flex-direction: row;
+      gap: 5vh;
+    }
+    .css-navbar > li > a {
+      padding: 1vh;
+      border-radius: 5%;
+    }
+    .css-navbar > li :hover {
+      background-color: #333;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1>Marketplace</h1>
+      <nav>
+        <ul class="css-navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#redirect-to-react">Explore</a></li>
+          <li><a href="#my_nfts">My Products</a></li>
+          <li><a href="#create-nft">Create</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Welcome to the Marketplace</h2>
+      <p>Discover and trade unique digital assets</p>
+      <a href="#" class="cta-button">Get Started</a>
+    </section>
+
+    <section class="featured">
+      <h2>Featured PRODUCTS</h2>
+      <div class="nft-grid"></div>
+    </section>
+    <section id="create-nft" class="create-nft">
+      <h2>Create an NFT</h2>
+      <form
+        style="display: flex; flex-direction: column; gap: 3vw; margin: 0.5vw"
+      >
+        <div>
+          <div><label for="nft-title">Title</label></div>
+          <div>
+            <input
+              type="text"
+              id="nft-title"
+              placeholder="Enter NFT title"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="nft-description">Description</label>
+          </div>
+          <div>
+            <textarea
+              id="nft-description"
+              placeholder="Enter NFT description"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="nft-image">Image</label>
+          </div>
+          <div>
+            <input type="file" id="nft-image" accept="image/*" required />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="nft-price">Price</label>
+          </div>
+          <div>
+            <input
+              type="number"
+              id="nft-price"
+              placeholder="Enter NFT price"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="nft-owner">Owner</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="nft-owner"
+              placeholder="Enter owner's name"
+              required
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          style="width: 175px; background-color: #333; color: white"
+          class="cta-button"
+        >
+          Link Product to NFT
+        </button>
+      </form>
+    </section>
+    <section id="my_nfts" class="my-nfts">
+      <h2>My Products</h2>
+      <div class="nft-grid">
+        <div class="nft-card">
+          <img
+            src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="NFT Image"
+          />
+          <h3><b>Watch</b></h3>
+        </div>
+        <div class="nft-card">
+          <img
+            src="https://m.media-amazon.com/images/I/81AgwogJ1cL._AC_UF1000,1000_QL80_.jpg"
+            alt="NFT Image"
+          />
+          <h3><b>Laptop</b></h3>
+        </div>
+        <div class="nft-card">
+          <img
+            src="https://www.sathya.store/img/category/G4YYDhW7R8844g8L.jpg"
+            alt="NFT Image"
+          />
+          <h3><b>Fridge</b></h3>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>
+        &copy; 2023 NFT Marketplace. All rights reserved by the team Warrany
+        with NFT.
+      </p>
+      <p>Co-created by Ankush Gupta, Gaurav Chhapliyal, Nikhil Mathur</p>
+    </footer>
+  </body>
+</html>
+<script>
+  // data:
+  const featuredNFTs = [
+    {
+      image:
+        "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      title: "Watch",
+      artist: "Niksow",
+    },
+    {
+      image:
+        "https://i.gadgets360cdn.com/products/large/moto-db-709x800-1652441656.jpg",
+      title: "Mobile",
+      artist: "Ankush",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      title: "Watch-2",
+      artist: "Gaurav",
+    },
+  ];
+
+  // Function to display featured NFTs
+  function displayFeaturedNFTs() {
+    const nftGrid = document.querySelector(".nft-grid");
+
+    featuredNFTs.forEach((nft) => {
+      const nftCard = document.createElement("div");
+      nftCard.classList.add("nft-card");
+
+      const nftImage = document.createElement("img");
+      nftImage.src = nft.image;
+      nftImage.alt = "PRODUCT IMAGE";
+      nftCard.appendChild(nftImage);
+
+      const nftTitle = document.createElement("h3");
+      nftTitle.textContent = nft.title;
+      nftCard.appendChild(nftTitle);
+
+      const nftArtist = document.createElement("p");
+      nftArtist.textContent = nft.artist;
+      nftCard.appendChild(nftArtist);
+
+      nftGrid.appendChild(nftCard);
+    });
+  }
+
+  // Call the function to display featured NFTs
+  displayFeaturedNFTs();
+</script>
